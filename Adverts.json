@@ -1,0 +1,18 @@
+{
+    "adverts":[
+        {
+            "name": "Iphone X",
+            "price": 450,
+            "sale":true,
+            "tags":["mobile"],
+            "photo": null
+        },
+        {
+            "name": "BMW 230i",
+            "price": 20500,
+            "sale":true,
+            "tags":["motor"],
+            "photo": null
+        }
+    ]
+}
