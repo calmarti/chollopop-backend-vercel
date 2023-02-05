@@ -5,7 +5,7 @@ const AdvertSchema = mongoose.Schema({
   price: { type: String, required: true },
   sale: { type: Boolean, required: true },
   tags: {type: [String], required: true },
-  photo: {type: String}
+  photo: { type: String }
 });
 
 
