@@ -7,8 +7,6 @@ const conn = require('./lib/connect');
 
 const { Advert, User } = require('./models')
 
-
-
 async function main () {
 
   // Inicializar la colección de anuncios
@@ -16,8 +14,8 @@ async function main () {
   console.log(`\nAdverts: Deleted ${advertsResult.deletedCount}, loaded ${advertsResult.loadedCount}`)
 
   //Inicializar la colección de usuarios
-  // const usuariosResult = await initUsers()
-  // console.log(`\nUsuarios: Deleted ${usuariosResult.deletedCount}, loaded ${usuariosResult.loadedCount.length}`)
+  // const usersResult = await initUsers()
+  // console.log(`\nUsers: Deleted ${usersResult.deletedCount}, loaded ${usersResult.loadedCount.length}`)
 
   await conn.close();
   console.log('\nDone.')
@@ -32,11 +30,12 @@ async function initAdverts(data) {
   return { deletedCount, loadedCount }
 }
 
+// TODO: this function many or may not need some adjustments
 // async function initUsers () {
 //   const { deletedCount } = await User.deleteMany()
 //   const loadedCount = await User.insertMany([
-//     {name: 'user', email: 'user@example.com', password: Usuario.hashPassword('1234')},
-//     {name: 'user2', email: 'user2@example.com', password: Usuario.hashPassword('1234')}
+//     {name: 'user', email: 'user@example.com', password: User.hashPassword('1234')},
+//     {name: 'user2', email: 'user2@example.com', password: User.hashPassword('1234')}
 //   ])
 //   return { deletedCount, loadedCount }
 // }

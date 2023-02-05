@@ -40,8 +40,8 @@ router.post("/login", async function (req, res, next) {
 });
 
 router.post("/signup", async function (req, res, next) {
-  const hashedPassword = await User.hashPassword(req.body.password);  
   try {
+      const hashedPassword = await User.hashPassword(req.body.password);  
       const newUser = await new User({
         name: req.body.name,
         username: req.body.username,
@@ -49,7 +49,7 @@ router.post("/signup", async function (req, res, next) {
         password: hashedPassword,
       }).save();
      res
-     .status(200)
+     .status(201)
      .json({result:'new user created'});
   }
   catch(err){

@@ -13,6 +13,13 @@
             "sale":true,
             "tags":["motor"],
             "photo": null
+        },
+        {
+            "name": "Camiseta Atletico de Madrid",
+            "price": 270,
+            "sale":false,
+            "tags":["clothing"],
+            "photo": null
         }
     ]
 }
