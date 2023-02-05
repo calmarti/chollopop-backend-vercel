@@ -8,6 +8,14 @@ const AdvertSchema = mongoose.Schema({
   photo: { type: String }
 });
 
+AdvertSchema.statics.getTags = async function() {
+  try {
+    const values = await Advert.distinct('tags');
+    return values;
+  } catch (err) {
+    throw(err);
+  }
+};
 
 const Advert = mongoose.model('Advert', AdvertSchema);
 

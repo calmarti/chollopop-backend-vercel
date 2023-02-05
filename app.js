@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/adverts', require('./routes/adverts'));
-
+app.use('/api/tags', require('./routes/tags'));
 
 
 
