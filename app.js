@@ -10,7 +10,7 @@ require('dotenv').config();
  
 var app = express();
 
-app.use(cors())
+app.use(cors());
 
 require('./lib/connect');
 
@@ -27,8 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/api/auth', require('./routes/auth'));
-// app.use('/api/adverts', require('./routes/adverts'));
-// app.use('/api/register', require('/routes/register'));
+app.use('/api/adverts', require('./routes/adverts'));
+
 
 
 

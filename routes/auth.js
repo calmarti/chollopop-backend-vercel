@@ -39,7 +39,7 @@ router.post("/login", async function (req, res, next) {
   }
 });
 
-router.post("/register", async function (req, res, next) {
+router.post("/signup", async function (req, res, next) {
   const hashedPassword = await User.hashPassword(req.body.password);  
   try {
       const newUser = await new User({
