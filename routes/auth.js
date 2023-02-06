@@ -25,14 +25,13 @@ router.post("/login", async function (req, res, next) {
       { _id: user._id },
       process.env.JWT_SECRET,
       { expiresIn: "7d" },
-      (err, token) => {
+      (err, accessToken) => {
         if (err) {
           return next(err);
         }
-        res.json({ ok: true, token: token });
+        res.json({ ok: true, accessToken: accessToken });
       }
     );
-
   } catch (err) {
     res.status(500);
     next(err);
