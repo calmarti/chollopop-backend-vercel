@@ -1,6 +1,7 @@
 ## Chollopop-backend
 
-Backend exposing CRUD endpoints to the frontend of Chollopop (MVP of online shop) 
+* CRUD endpoints to the frontend of Chollopop (MVP of online shop) 
+* JWT auth
 
 ---
 
