@@ -4,21 +4,42 @@
             "name": "Iphone X",
             "price": 450,
             "sale":true,
-            "tags":["mobile"],
+            "tags":["Móviles y telefonía"],
             "photo": null
         },
         {
             "name": "BMW 230i",
             "price": 20500,
             "sale":true,
-            "tags":["motor"],
+            "tags":["Coches"],
             "photo": null
         },
         {
             "name": "Camiseta Atletico de Madrid",
             "price": 270,
             "sale":false,
-            "tags":["clothing"],
+            "tags":["Ropa y accesorios"],
+            "photo": null
+        },
+        {
+            "name": "Lenovo Thinkpad",
+            "price": 498,
+            "sale":true,
+            "tags":["Informática y electrónica"],
+            "photo": null
+        },
+        {
+            "name": "Macbook",
+            "price": 670,
+            "sale":false,
+            "tags":["Informática y electrónica"],
+            "photo": null
+        },
+        {
+            "name": "Galaxy S22",
+            "price": 510,
+            "sale":true,
+            "tags":["Móviles y telefonía"],
             "photo": null
         }
     ]
