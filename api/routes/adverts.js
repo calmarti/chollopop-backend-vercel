@@ -2,6 +2,10 @@ var express = require('express');
 var router = express.Router();
 const Advert = require('../models/Advert');
 
+var multer = require('multer');
+const upload = multer();
+
+
 //GET adverts endpoint
 router.get('/', async function (req, res, next) {
   try {
@@ -26,8 +30,11 @@ router.get("/:id", async function (req, res, next) {
 });
 
 
-//POST create advert endpoint
-router.post('/', async function (req, res, next) {
+//POST create advert endpoint to post multipart/form-data with multer. 
+//Beware that this implementation only allows to a multipart/form-data object with TEXT ONLY 
+//Future version must allow for image uploading
+
+router.post('/', upload.none(),  async function (req, res, next) {
   try {
     const data = req.body;
     const newAdvert = await new Advert(data).save();

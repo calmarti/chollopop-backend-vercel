@@ -7,6 +7,7 @@ const router = express.Router();
 
 router.post("/login", async function (req, res, next) {
   try {
+    console.log(process.env.JWT_SECRET)
     const email = req.body.email;
     const password = req.body.password;
 
